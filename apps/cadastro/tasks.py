@@ -12,27 +12,37 @@ class Address:
         self.neighborhood = None
         self.city = None
         self.uf = None
-        self.check_cep()
-    
-    def check_cep(self):
-        if not self.check_cep_len():
-            raise ValueError("CEP Inválido! O CEP deve possuir 8 números.")
-        elif not self.check_cep_values():
-            raise ValueError("CEP Inválido! O CEP deve possuir somente números.")
-    
-    def check_cep_values(self):
-        if re.match(r'^[0-9]*$', self.cep):
-            return True
-        else:
-            return False
 
-    def check_cep_len(self):
-        if len(self.cep) == 8:
-            return True
-        else:
-            return False
-    
+    def get_address_info(self):
+        '''
+        This method get address information
+        return result as dict
+        '''
+        self.set_adress_info()
+        result = {'street': self.street,
+                  'neighborhood': self.neighborhood,
+                  'city': self.city,
+                  'uf': self.uf                  
+                 }
+
+        return result
+
+    def validate_cep(self):
+        '''
+        This method validate if the informed cep is valid.
+        no return
+        '''
+        if not len(self.cep) == 8:
+            raise ValueError("CEP Inválido! O CEP deve possuir 8 números.")
+        elif not re.match(r'^[0-9]*$', self.cep):
+            raise ValueError("CEP Inválido! O CEP deve possuir somente números.")
+
     def check_existed_cep(self, dict_info):
+        '''
+        This method check if the informed cep exist.
+        param: dict_info as dict
+        return bool
+        '''
         if 'erro' in dict_info.keys():
             if dict_info['erro'] == True:
                 return False
@@ -41,7 +51,11 @@ class Address:
         else:
             return True
 
-    def get_adress_info(self):
+    def set_adress_info(self):
+        '''
+        This method set the address atributes
+        no return
+        '''
         dict_info = self.get_api_info()
         if self.check_existed_cep(dict_info):
             self.street = dict_info['logradouro']
@@ -49,16 +63,23 @@ class Address:
             self.city = dict_info['localidade']
             self.uf = dict_info['uf']
         else:
-            raise ValueError("Este CEP não existe! Por favor adicione um CEP válido.") 
+            raise ValueError("Este CEP não existe! Por favor adicione um CEP válido.")
 
     def acess_viacep(self):
+        '''
+        This method access the viacep API
+        return response as json
+        '''
         response = requests.get(f'https://viacep.com.br/ws/{self.cep}/json')
         return response
-    
+
     def get_api_info(self):
+        '''
+        This method get the viacep api response.
+        return result as dict
+        '''
         response = self.acess_viacep()
         result = json.loads(response.content)
 
         return result
-    
-        
+

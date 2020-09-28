@@ -6,6 +6,6 @@ from . import views
 
 urlpatterns = [
     path('address/', views.AllAddress.as_view()),
-    path('register/' views.RegisterClient.as_view())
+    path('register/', views.RegisterClient.as_view())
 
 ]

@@ -3,7 +3,20 @@ import json
 import re
 
 class Register:
-    pass
+    def __init__(self, user_info):
+        self.name = user_info['name']
+        self.birth = user_info['birth']
+        self.cep = user_info['cep']
+        self.street = user_info['street']
+        self.home_number = user_info['home_number']
+        self.neighborhood = user_info['neighborhood']
+        self.city = user_info['city']
+        self.phone = user_info['phone']
+        self.uf = user_info['uf']
+        self.email = user_info['email']
+        self.passw = user_info['passw']
+
+    
 
 class Address:
     def __init__(self, cep):
@@ -82,4 +95,3 @@ class Address:
         result = json.loads(response.content)
 
         return result
-

@@ -8,7 +8,7 @@ class User(models.Model):
     home_number = models.CharField("home_number", max_length=10)
     neighborhood = models.CharField("neighborhood", max_length=100)
     city = models.CharField("city", max_length=100)
-    phone = models.CharField("phone_number", max_length=11)
+    phone = models.IntegerField("phone_number", max_length=11)
     uf = models.CharField("uf", max_length=2)
     email = models.EmailField("email", max_length=254)
     passw = models.CharField("passw2", max_length=100)

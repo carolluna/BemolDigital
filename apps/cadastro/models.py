@@ -10,6 +10,6 @@ class User(models.Model):
     city = models.CharField("city", max_length=100)
     phone = models.IntegerField("phone_number", max_length=11)
     uf = models.CharField("uf", max_length=2)
-    email = models.EmailField("email", max_length=254)
+    email = models.EmailField("email", unique=True, max_length=254)
     passw = models.CharField("passw2", max_length=100)
 

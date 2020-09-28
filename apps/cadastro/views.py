@@ -15,11 +15,12 @@ class AllAddress(APIView):
                 address = Address(cep)
                 address.validate_cep()
                 all_address = address.get_address_info()
-                return HttpResponse(all_address)
+                return JsonResponse(all_address, status=201)
             except ValueError as ex:
-                return HttpResponse(ex)
+                print(ex)
+                return JsonResponse({"error": str(ex)}, status=400)
         else:
-            return HttpResponse('No CEP data')
+            return JsonResponse({"error": 'No CEP data'}, status=400)
 
 class RegisterClient(APIView):
 

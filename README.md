@@ -10,6 +10,7 @@
 - Check if python 3.7.7 is installed. If not you can download on:  
   - https://www.python.org/downloads/release/python-377/
   
+With a terminal:
 - Install the virtual environment:  
   - pip install virtualenv  
   
@@ -41,6 +42,7 @@
 ### Follow the steps to use the interface:
 
 - Open another terminal (does not close the Server terminal)
+- Activate the virtual environment
 - run the interface pyhton file: *python interface.py*
 
 Done, now you can test the Cadastro Bemol Digital.

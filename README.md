@@ -16,6 +16,7 @@ With a terminal:
   
 - Create the virtual environment:  
   - virtualenv venv
+  - Windows: python -m virtualenv venv
   
 - Activate the virtual environment:  
   - For Windows: venv\Scripts\activate

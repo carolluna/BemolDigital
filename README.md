@@ -33,7 +33,8 @@ With a terminal:
 
 - Open a terminal
 - Activate the virtual environment
-- Activate server with this command:
+- Activate server with these commands:
+  - *python manage.py migrate*
   - *python manage.py runserver*
 
   Your server is active :)

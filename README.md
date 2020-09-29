@@ -16,6 +16,7 @@ With a terminal:
   
 - Create the virtual environment:  
   - virtualenv venv
+  - Windows: python -m virtualenv venv
   
 - Activate the virtual environment:  
   - For Windows: venv\Scripts\activate
@@ -32,7 +33,8 @@ With a terminal:
 
 - Open a terminal
 - Activate the virtual environment
-- Activate server with this command:
+- Activate server with these commands:
+  - *python manage.py migrate*
   - *python manage.py runserver*
 
   Your server is active :)

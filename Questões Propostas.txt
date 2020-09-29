@@ -1,0 +1,31 @@
+Questões:
+
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+Resposta:
+A solução deve ser disponibilizada em Cloud devido a necessidade de uma infraestrutura escalável
+com mais facilidade.
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
+solução, responda qual ferramenta acreditas ser apropriada para o controle de
+tarefas da equipe, a ferramenta é ágil?
+Resposta:
+Levando em consideração apenas pessoas técnicas em desenvolvimento acredito que o kanban possa
+ser uma boa ferramenta para controle de tarefas dos desenvolvedores. 
+Caso o projeto necessite crescer pelo meu ponto de vista Scrum seria um bom método para 
+aplicar ao projeto, porém seria necessário o papel de um responsável pelo projeto.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+Resposta:
+No momento de minha carreira profissional eu não me sinto a vontade para liderar uma equipe, 
+acredito que para assumir uma liderança é necessário preparo e experiencia suficiente para
+poder motivar a equipe e conseguir auxiliar a equipe em todos os obstaculos.  
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+Resposta:
+O que sempre procuro propor é o estudo da equipe para melhor capacitação e conhecimento de novas tecnologias. 
+Para o time sempre saber tomar decisões de projetos e utilizar tecnologias compativeis com o que é necessário no projeto. 
+
+5. Acha válido esse desafio para o processo que está participando?
+Resposta:
+Sim. Neste desafio consegui aplicar conhecimentos que já tenho adiquirido e aprender novos 
+conceitos.

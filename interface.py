@@ -166,7 +166,6 @@ class UserRegister:
         if self.check_fields():
             payload = json.dumps(self.set_dict())
             response = requests.post('http://127.0.0.1:8000/cadastro/register/', data=payload)
-            print(response)
             self.check_response(response)
         else:
             self.lblmsg['text'] = 'Todos os campos devem ser preenchidos'
